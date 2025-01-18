@@ -1,0 +1,186 @@
+<div class="container">
+  <div class="prediction-card">
+    <h1>🚀 Predictor de Éxito Empresarial Pro</h1>
+    
+    <div class="input-section">
+      <div class="form-grid">
+        <!-- Sección 1: Idea Principal -->
+        <div class="form-group full-width">
+          <label for="business-idea">Describe tu idea de negocio:</label>
+          <textarea id="business-idea" placeholder="Ej: Quiero crear una app de delivery de comida saludable..."></textarea>
+        </div>
+
+        <!-- Sección 2: Información Financiera -->
+        <div class="form-group">
+          <label for="initial-investment">Inversión Inicial Estimada ($):</label>
+          <input type="number" id="initial-investment" placeholder="Ej: 10000" min="0">
+        </div>
+
+        <div class="form-group">
+          <label for="monthly-expenses">Gastos Mensuales Estimados ($):</label>
+          <input type="number" id="monthly-expenses" placeholder="Ej: 2000" min="0">
+        </div>
+
+        <div class="form-group">
+          <label for="product-price">Precio Promedio del Producto/Servicio ($):</label>
+          <input type="number" id="product-price" placeholder="Ej: 50" min="0">
+        </div>
+
+        <!-- Sección 3: Información de Mercado -->
+        <div class="form-group">
+          <label for="target-market">Público Objetivo Principal:</label>
+          <select id="target-market">
+            <option value="">Selecciona una opción</option>
+            <option value="gen-z">Generación Z (18-24 años)</option>
+            <option value="millennials">Millennials (25-40 años)</option>
+            <option value="gen-x">Generación X (41-56 años)</option>
+            <option value="boomers">Baby Boomers (57-75 años)</option>
+            <option value="business">Empresas (B2B)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="market-size">Tamaño Estimado del Mercado:</label>
+          <select id="market-size">
+            <option value="">Selecciona una opción</option>
+            <option value="local">Local (Ciudad)</option>
+            <option value="regional">Regional (Estado/Provincia)</option>
+            <option value="national">Nacional</option>
+            <option value="international">Internacional</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="competition-level">Nivel de Competencia:</label>
+          <select id="competition-level">
+            <option value="">Selecciona una opción</option>
+            <option value="low">Baja (0-3 competidores)</option>
+            <option value="medium">Media (4-10 competidores)</option>
+            <option value="high">Alta (más de 10 competidores)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="innovation-level">Nivel de Innovación:</label>
+          <select id="innovation-level">
+            <option value="">Selecciona una opción</option>
+            <option value="incremental">Mejora Incremental</option>
+            <option value="moderate">Innovación Moderada</option>
+            <option value="disruptive">Disruptivo/Nuevo Mercado</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="analyze-btn" class="analyze-button">
+        <span class="button-text">Analizar Viabilidad</span>
+        <div class="button-icon">📊</div>
+      </button>
+    </div>
+    
+    <div id="results" class="results hidden">
+      <!-- Sección de Resultados Principal -->
+      <div class="result-header">
+        <div class="category-badge" id="category-badge">
+          <span class="category-icon">🎯</span>
+          <span id="category-text">TECNOLOGÍA</span>
+        </div>
+      </div>
+      
+      <!-- Indicadores Principales -->
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <h3>Probabilidad de Éxito</h3>
+          <div class="meter">
+            <div id="success-bar" class="meter-bar"></div>
+            <span id="success-percentage" class="meter-value">0%</span>
+          </div>
+        </div>
+
+        <div class="metric-card">
+          <h3>ROI Estimado</h3>
+          <div class="meter">
+            <div id="roi-bar" class="meter-bar"></div>
+            <span id="roi-value" class="meter-value">0%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Análisis Financiero -->
+      <div class="analysis-section">
+        <h3>📊 Análisis Financiero</h3>
+        <div class="financial-grid">
+          <div class="financial-item" id="breakeven-point">
+            <span class="label">Punto de Equilibrio</span>
+            <span class="value">-</span>
+          </div>
+          <div class="financial-item" id="monthly-revenue">
+            <span class="label">Ingreso Mensual Proyectado</span>
+            <span class="value">-</span>
+          </div>
+          <div class="financial-item" id="profit-margin">
+            <span class="label">Margen de Beneficio</span>
+            <span class="value">-</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timeline y Fases -->
+      <div class="timeline-section">
+        <h3>⏱️ Cronograma Estimado</h3>
+        <div class="timeline">
+          <div class="timeline-phase">
+            <div class="phase-icon">🎯</div>
+            <div class="phase-content">
+              <h4>Fase Inicial</h4>
+              <p id="time-to-market">-</p>
+            </div>
+          </div>
+          <div class="timeline-phase">
+            <div class="phase-icon">📈</div>
+            <div class="phase-content">
+              <h4>Break Even</h4>
+              <p id="breakeven-time">-</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Análisis de Mercado -->
+      <div class="market-analysis">
+        <h3>🎯 Análisis de Mercado</h3>
+        <div class="market-grid">
+          <div class="market-item" id="market-potential">
+            <h4>Potencial de Mercado</h4>
+            <p>-</p>
+          </div>
+          <div class="market-item" id="target-analysis">
+            <h4>Análisis del Público Objetivo</h4>
+            <p>-</p>
+          </div>
+          <div class="market-item" id="competition-analysis">
+            <h4>Análisis de Competencia</h4>
+            <p>-</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Insights -->
+      <div class="insights-grid">
+        <div class="insights-column risks">
+          <h3>⚠️ Riesgos Potenciales</h3>
+          <ul id="risks-list"></ul>
+        </div>
+        <div class="insights-column opportunities">
+          <h3>💡 Oportunidades</h3>
+          <ul id="opportunities-list"></ul>
+        </div>
+      </div>
+
+      <!-- Recomendaciones -->
+      <div class="recommendations">
+        <h3>🎯 Recomendaciones Clave</h3>
+        <ul id="recommendations-list"></ul>
+      </div>
+    </div>
+  </div>
+</div>
